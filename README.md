@@ -13,8 +13,7 @@ For now, the following steps will need to occur before processing a .CSV:
 
 ## Preliminary Steps
 
-1. Perform a search on MAUDE Database
-<https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfmaude/search.cfm>
+1. Perform a search on [MAUDE Database](https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfmaude/search.cfm)
 
 2. When satisfied with search, click on "Export to Excel."
 
