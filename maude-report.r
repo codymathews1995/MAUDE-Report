@@ -87,14 +87,14 @@ if (http_status(response)$category == "Success") {
 
     # Write CSV files
     tryCatch({
-        write.csv(event_report, "processed/event_type_report.csv", row.names = FALSE)
+        write.csv(event_report, "reports/event_type_report.csv", row.names = FALSE)
         cat("Brand Name and Event Type Report generated: event_type_report.csv\n")
     }, error = function(e) {
         cat("Error writing event_type_report.csv:", conditionMessage(e), "\n")
     })
 
     tryCatch({
-        write.csv(problem_report, "processed/product_problems_report.csv", row.names = FALSE)
+        write.csv(problem_report, "reports/product_problems_report.csv", row.names = FALSE)
         cat("Brand Name and Product Problems Report generated: product_problems_report.csv\n")
     }, error = function(e) {
         cat("Error writing product_problems_report.csv:", conditionMessage(e), "\n")
