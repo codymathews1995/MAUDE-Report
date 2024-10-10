@@ -5,6 +5,8 @@
 This program is intended to utilize data acquired from the Manufacturer and User Facility
 Device Experience (MAUDE) Database using the openFDA API to make helpful reports on the data provided.
 
+⚠ WARNING: This is a work in progress and is in no way finished or near its completion.
+
 ## Current Shortcoming
 
 So far, this program only takes Product Codes and Start/End Dates for custom search queries.
