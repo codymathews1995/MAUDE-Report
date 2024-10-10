@@ -40,7 +40,7 @@ R.exe
 
 3. Run the script
 ```r
-source("maude-report.r")
+source("maude_report.r")
 ```
 
 ## Note
