@@ -3,7 +3,7 @@ import pandas as pd
 import os
 import json
 
-# Take User Input
+# Take user input
 def user_input():
     product_code_input = input("Enter the Product Code: ")
     start_date_input = input("Start Date [YYYY-MM-DD]: ")
@@ -22,7 +22,7 @@ def query_constructor(start_date, end_date, product_code):
     query = f"{base_endpoint}{date_received}{separator}{p_code}{limit}"
     return query
 
-# Fetch Data from openFDA
+# Fetch data from openFDA
 def fetch_API(query):
     response = requests.get(query)
     if response.status_code == 200:
@@ -50,7 +50,7 @@ def normalize_data(data):
 
     return combined_data
 
-# Create Event Report
+# Create event report
 def create_event_report(combined_data):
     event_report = (combined_data
         .groupby(['Brand_Name', 'Event_Type'])
@@ -60,7 +60,7 @@ def create_event_report(combined_data):
     )
     return event_report
 
-# Create Problem Report
+# Create problem report
 def create_problem_report(combined_data):
     problem_report = (combined_data
         .groupby(['Brand_Name', 'Product_Problems'])
@@ -99,7 +99,6 @@ def save_normalized_json(data):
     except Exception as e:
         print(f"Error saving normalized data: {str(e)}")
 
-# Main function
 def main():
     try:
         product_code, start_date, end_date = user_input()
