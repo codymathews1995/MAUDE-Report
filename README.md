@@ -2,48 +2,37 @@
 
 ## Introduction
 
-This program is intended to utilize data acquired from the Manufacturer and User Facility
-Device Experience (MAUDE) Database using the openFDA API to make helpful reports on the data provided.
+This program utilizes data from the Manufacturer and User Facility Device Experience (MAUDE) Database through the openFDA API to generate insightful reports.
 
-⚠ WARNING: This is a work in progress and is in no way finished or near its completion.
+⚠ WARNING: This is a work in progress and is not yet complete.
 
 ## Current Shortcoming
 
-So far, this program only takes Product Codes and Start/End Dates for custom search queries.
-Working on making this more customizable.
+Currently, the program accepts only Product Codes and Start/End Dates for custom search queries. Efforts are underway to enhance its customization options.
 
 ## How to Run
 
-1. Ensure you have R installed
+1. **Ensure you have Python installed**
 
-```r
-R --version
-```
+    Check your Python version:
 
-or
+    ```bash
+    python --version
+    ```
 
-```r
-R.exe --version
-```
+    If Python is not installed, download it from: [Python Downloads](https://www.python.org/downloads/)
 
-If not, install it here: <https://cloud.r-project.org>
+2. **Create a Virtual Environment and install required libraries**
 
-2. Start an active R shell
+    ```bash
+    python -m venv .venv && .venv\Scripts\activate && pip install -r requirements.txt 
+    ```
 
-```r
-R
-```
+3. **Run the Script**
 
-or
-
-```r
-R.exe
-```
-
-3. Run the script
-```r
-source("maude_report.r")
-```
+    ```bash
+    python maude_report.py
+    ```
 
 ## Note
 
