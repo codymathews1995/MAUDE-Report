@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reports</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <h1>Event Type Report</h1>
+        <a href="/">Back</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Brand Name</th>
+                <th>Event Type</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in event_counts %}
+            <tr>
+                <td>{{ row['brand_name'] }}</td>
+                <td>{{ row['event_type'] }}</td>
+                <td>{{ row['count'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h1>Product Problems Report</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Brand Name</th>
+                <th>Product Problems</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in problem_counts %}
+            <tr>
+                <td>{{ row['brand_name'] }}</td>
+                <td>{{ row['product_problems'] }}</td>
+                <td>{{ row['count'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

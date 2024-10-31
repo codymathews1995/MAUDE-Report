@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Results</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Results</h1>
+            <a href="{{ url_for('index') }}">Go Back</a>
+            <a href="{{ url_for('reports') }}">View Reports</a>
+            <table>
+            <thead>
+                <tr>
+                    <th>Brand Name</th>
+                    <th>Event Type</th>
+                    <th>Product Problems</th>
+                    <th>Date Received</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if events %}
+                    {% for event in events %}
+                        <tr>
+                            <td>{{ event.brand_name }}</td>
+                            <td>{{ event.event_type }}</td>
+                            <td>{{ event.product_problems }}</td>
+                            <td>{{ event.date_received }}</td>
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="4">No results found.</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

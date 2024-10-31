@@ -1,2 +1,4 @@
-requests
-pandas
+Flask==2.3.3
+pandas==1.5.3
+numpy==1.23.5  # This version should be compatible with pandas 1.5.3
+requests==2.28.1

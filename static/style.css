@@ -1,0 +1,140 @@
+/* Global Styles */
+body {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6; /* Improved line spacing */
+}
+
+/* Container Styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #1e1e1e; /* Slightly lighter dark background for the container */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Heading Styles */
+h1 {
+    text-align: center;
+    color: #00acc1; /* Accent color */
+    font-size: 2em; /* Larger heading */
+}
+
+/* Form Styles */
+.form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+}
+
+label {
+    margin: 10px 0 5px; /* Spacing between label and input */
+}
+
+input[type="text"],
+input[type="date"],
+button {
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #333; /* Input background color */
+    color: #ffffff; /* Input text color */
+}
+
+/* Input Focus Styles */
+input[type="text"]:focus,
+input[type="date"]:focus {
+    outline: none; /* Remove default outline */
+    border-color: #00acc1; /* Highlight border color */
+    box-shadow: 0 0 5px rgba(0, 172, 193, 0.5); /* Subtle shadow */
+}
+
+/* Button Styles */
+button {
+    margin-top: 15px; /* Space above button */
+    cursor: pointer;
+    background-color: #00acc1; /* Button background */
+    border: none; /* Remove border */
+    color: #ffffff; /* Button text color */
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #00897b; /* Darker shade on hover */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #444; /* Darker border for table */
+}
+
+th {
+    background-color: #00796b; /* Dark teal for headers */
+    color: #ffffff; /* Header text color */
+}
+
+/* Table Row Hover Effect */
+tr:hover {
+    background-color: #333; /* Change background on hover */
+}
+
+/* Link Styles */
+a {
+    display: inline-block;
+    margin: 20px 10px;
+    padding: 10px 15px;
+    color: #ffffff; /* Link text color */
+    text-decoration: none;
+    background-color: #00acc1; /* Accent color for links */
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #00897b; /* Darker shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    button {
+        padding: 8px; /* Smaller padding for smaller screens */
+    }
+
+    a {
+        margin: 10px 5px; /* Smaller margins for smaller screens */
+    }
+}
+
+/* Loader Styles (optional) */
+.loader {
+    border: 8px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    border-top: 8px solid #00acc1; /* Consistent border color */
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
